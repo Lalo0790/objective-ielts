@@ -4,7 +4,7 @@
   --c-read:#1F7A6D; --c-listen:#3D5A80; --c-write:#E4572E; --c-speak:#B86E12; --c-lang:#5E8C3A;
   --ok:#1F7A6D; --bad:#C2412A;
   --r:18px; --r-sm:12px; --shadow:0 1px 0 rgba(20,33,61,.06), 0 8px 24px -12px rgba(20,33,61,.18);
-  --serif:'Fraunces', Georgia, serif; --sans:'Instrument Sans', system-ui, -apple-system, sans-serif;
+  --serif:'Source Serif 4', Georgia, serif; --sans:'Instrument Sans', system-ui, -apple-system, sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
