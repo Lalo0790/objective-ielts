@@ -51,7 +51,7 @@ export function chartHTML(c){
   if (c.type === 'bar'){ const gw = bw*0.74, sw = gw/c.series.length;
     c.series.forEach((s,si)=> s.data.forEach((v,i)=>{ const x = L+bw*i+(bw-gw)/2+sw*si; body += `<rect x="${x.toFixed(1)}" y="${y(v).toFixed(1)}" width="${(sw-2).toFixed(1)}" height="${(y(min)-y(v)).toFixed(1)}" rx="2" fill="${PAL[si]}"/>`; })); }
   else { c.series.forEach((s,si)=>{ const pts = s.data.map((v,i)=>`${(L+bw*i+bw/2).toFixed(1)},${y(v).toFixed(1)}`); body += `<polyline points="${pts.join(' ')}" fill="none" stroke="${PAL[si]}" stroke-width="2.5"/>` + pts.map(p=>`<circle cx="${p.split(',')[0]}" cy="${p.split(',')[1]}" r="3.5" fill="#fff" stroke="${PAL[si]}" stroke-width="2"/>`).join(''); }); }
-  return `<div class="chartbox"><h4>${esc(c.title)}</h4><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:420px">${grid}${body}${xl}<text x="12" y="${T+4}" font-size="10" fill="#6B7287" transform="rotate(-90 12 ${T+4})" text-anchor="end">${esc(c.unit)}</text></svg>${legend}</div>`;
+  return `<div class="chartbox"><h4>${esc(c.title)}</h4><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:340px">${grid}${body}${xl}<text x="12" y="${T+4}" font-size="10" fill="#6B7287" transform="rotate(-90 12 ${T+4})" text-anchor="end">${esc(c.unit)}</text></svg>${legend}</div>`;
 }
 // ---------- text to speech ----------
 let voices = [];
